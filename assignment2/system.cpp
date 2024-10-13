@@ -5,17 +5,20 @@ using namespace std;
 
 System::System(size_t n, size_t m, std::vector< std::vector<double> > matrix) 
 {
-	//what does the constructor need to do?	
+	m_n = n;
+	m_m = m;
+	m_matrix = matrix;
+	m_numsol = -1;
 }
 
-int getNumSolutions() //0 = zero solutions, 1 = one solution, 2 = infinite
+int System::getNumSolutions() //0 = zero solutions, 1 = one solution, 2 = infinite
 {
-	//this is a getter	
+	return m_numsol;
 }
 
 std::vector<double> System::getSolution() //if 1 or 2 above, get a solution
 {
-	//another getter
+	return m_sol;
 }
 
 //adapted from 
