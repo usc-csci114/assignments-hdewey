@@ -61,11 +61,11 @@ void System::solve()
 		for (int j=0; j<m; ++j)
 			sum += m_sol[j] * m_matrix[i][j];
 		if (abs (sum - m_matrix[i][m]) > EPS)
-			m_numsol = 0;
+			{m_numsol = 0;return;}
 	}
 
 	for (int i=0; i<m; ++i)
 		if (where[i] == -1)
-			m_numsol = INF;
+			{m_numsol = INF;return;}
 	m_numsol = 1;
 }

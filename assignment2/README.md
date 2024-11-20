@@ -142,15 +142,16 @@ The `System` class looks as follows:
 ```c++
 class System {
 public:
-	System(size_t n, size_t m, vector< vector<double> > matrix);
+	System(size_t n, size_t m, std::vector< std::vector<double> > matrix);
 	void solve();
 	int getNumSolutions(); //0 = zero solutions, 1 = one solution, 2 = infinite
-	vector<double> getSolution(); //if 1 or 2 above, get a solution
+	std::vector<double> getSolution(); //if 1 or 2 above, get a solution
 	
 private:
 	size_t m_n, m_m;
 	int m_numsol;
-	vector<vector<double> > m_matrix;
+	std::vector<std::vector<double> > m_matrix;
+	std::vector<double> m_sol;
 };
 ```
 
