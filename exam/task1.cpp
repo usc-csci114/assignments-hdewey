@@ -83,6 +83,8 @@ int main() {
         for (const auto& sp : species) {
             int index = speciesIndices[sp];
             int count = 0;
+
+            // force zeroes on empty cells
             try {
                 count = std::stoi(row[index]);
             } catch (...) {
